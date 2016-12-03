@@ -8,16 +8,16 @@ tl;dr:
 ### Magical setup:
 `% cd workspace`
 
-`% bash <(curl https://raw.githubusercontent.com/Spaceman-Labs/asana-post-commit/master/setup.sh)`
+`% bash <(curl https://raw.githubusercontent.com/luugiathuy/asana-post-commit/master/setup.sh)`
 
 ### Manual setup:
 Copy the post-commit file to your repo's root `.git/hooks` directory. It's probably not a great idea to actually clone the repo into the internals of your repo. I don't know that it will break anything, but I don't guarantee it won't.
 
 Then run the following commands:
 
-`% git config --global user.asana-token "MY_ASANA_PERSONAL_ACCESS_TOKEN" (http://app.asana.com/-/account_api)`
+`% git config user.asana-token "MY_ASANA_PERSONAL_ACCESS_TOKEN" (http://app.asana.com/-/account_api)`
 
-`% git config --global user.display-branch-name-in-comment "true/false" # (This is config is optional, defaults to false)` 
+`% git config user.display-branch-name-in-comment "true/false" # (This is config is optional, defaults to false)` 
 
 Then chmod your hooks folder and post-commit hook file:
 `% chmod 755 .git/hooks && chmod ogu+rx .git/hooks/post-commit`
