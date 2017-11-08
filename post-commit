@@ -45,6 +45,9 @@ for repository in $(git remote -v | awk '{ print $2 }'); do
     elif [[ $host == "github.com" ]]; then
         commit_url="https://github.com/$project/commit/"
         break;
+    elif [[ $host == "gitlab.com" ]]; then
+        commit_url="https://gitlab.com/$project/commit/"
+        break;
     else
         commit_url=""
     fi
